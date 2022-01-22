@@ -13,6 +13,7 @@ function gameReset() {
    for(var i=0;i<boundary.length;i++){
      boundary[i].style.background="#eeeeee"
    }
+   document.getElementById("status").innerHTML='Begin by moving your mouse over the "S."'
 }
 
 function accident() {
@@ -25,7 +26,9 @@ function accident() {
 
 
 function gameEnd(){
-    document.getElementById("status").innerHTML="You Win"
+  if (document.getElementById("status").innerHTML!="You Lost"){
+    document.getElementById("status").innerHTML="You Won"
+  }
 }
 
 }
