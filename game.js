@@ -26,7 +26,9 @@ function accident() {
      }
   document.getElementById("status").innerHTML="You Lost"
   total += subtraction
-  alert ("You Lost! Total points earned "+ total)
+  setTimeout(function() {
+    alert ("You Lost! Total points earned "+ total)
+  },1)
    }
 
 
