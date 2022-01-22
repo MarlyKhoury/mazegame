@@ -6,7 +6,9 @@ window.onload=(event)=>{
     document.getElementsByClassName("boundary")[i].addEventListener("mouseover",accident)
     }
 
-
+var addition=5
+var subtraction=-10
+var total=0
 
 function gameReset() {
      var boundary=document.getElementsByClassName("boundary")
@@ -14,6 +16,7 @@ function gameReset() {
      boundary[i].style.background="#eeeeee"
    }
    document.getElementById("status").innerHTML='Begin by moving your mouse over the "S."'
+   total= 0
 }
 
 function accident() {
@@ -22,12 +25,16 @@ function accident() {
     boundary[i].style.background="red"
      }
   document.getElementById("status").innerHTML="You Lost"
+  total += subtraction
+  alert ("You Lost! Total points earned "+ total)
    }
 
 
 function gameEnd(){
   if (document.getElementById("status").innerHTML!="You Lost"){
     document.getElementById("status").innerHTML="You Won"
+    total+= addition
+    alert ("You Won! Total points earned " + total)
   }
 }
 
