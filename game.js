@@ -36,8 +36,14 @@ function gameEnd(){
   if (document.getElementById("status").innerHTML!="You Lost"){
     document.getElementById("status").innerHTML="You Won"
     total+= addition
-    alert ("You Won! Total points earned " + total)
   }
+  var boundary=document.getElementsByClassName("boundary")
+  for(var i=0;i<boundary.length;i++){
+    boundary[i].style.background="green"
+  }
+  setTimeout(function(){
+  alert ("You Won! Total points earned " + total)
+  },1)
 }
 
 }
