@@ -30,14 +30,13 @@ function accident() {
     boundary[i].style.background="#ff8888"   
      }
   
-  }
   document.getElementById("status").innerHTML="You Lost"
   total += subtraction
   setTimeout(function() {
     alert ("You Lost! Total points earned "+ total)
   },1)
 
-
+}
 
 function gameEnd(){
   if (document.getElementById("status").innerHTML!="You Lost"){
