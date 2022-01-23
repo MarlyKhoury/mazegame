@@ -2,8 +2,7 @@
 window.onload=(event)=>{
 
     document.getElementById("start").onclick = gameReset
-    document.getElementById("end").addEventListener("mouseover",gameEnd)
-    
+    document.getElementById("end").addEventListener("mouseover",gameEnd)    
     for(var i=0;i<document.getElementsByClassName("boundary").length;i++){
     document.getElementsByClassName("boundary")[i].addEventListener("mouseover",accident)    
     }
@@ -28,15 +27,16 @@ function gameReset() {
 function accident() {
     var boundary=document.getElementsByClassName("boundary")
   for(var i=0;i<boundary.length;i++){
-    boundary[i].style.background="#ff8888"
-    
+    boundary[i].style.background="#ff8888"   
      }
+  
+  }
   document.getElementById("status").innerHTML="You Lost"
   total += subtraction
   setTimeout(function() {
     alert ("You Lost! Total points earned "+ total)
   },1)
-}
+
 
 
 function gameEnd(){
@@ -48,14 +48,12 @@ function gameEnd(){
   var boundary=document.getElementsByClassName("boundary")
   for(var i=0;i<boundary.length;i++){
     boundary[i].style.background="#88ff88"
-    
   }
-  
-isStart = false;
   setTimeout(function(){
   alert ("You Won! Total points earned " + total)
   },1)
 }
-
-
 }
+
+
+
