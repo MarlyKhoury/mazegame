@@ -56,7 +56,7 @@ function gameEnd(){
 
     }
   
-  else {document.getElementById("status").innerHTML="Nice Try"}
+  else {document.getElementById("status").innerHTML="You're Cheating!"}
 
 }
 
